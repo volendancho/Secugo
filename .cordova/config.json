@@ -1,0 +1,9 @@
+{
+    "lib": {
+        "www": {
+            "id": "com.iboris.secugo",
+            "version": "1.0.0",
+            "uri": "https://github.com/iBorisLtd/Secugo"
+        }
+    }
+}
