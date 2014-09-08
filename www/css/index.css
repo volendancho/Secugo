@@ -125,68 +125,80 @@ h1 {
 }
 
 .clearfix {
-    display: inline-block;
+    clear: both;
 }
-
-    .clearfix :after {
-        content: ".";
-        display: block;
-        clear: both;
-        visibility: hidden;
-        line-height: 0;
-        height: 0;
-    }
 
 #header {
-    height: 12%;
+    border-bottom: 1px solid rgba(180, 180, 180, 0.498039);
 }
 
-#drawer-row {
-    height: 40%;
-    background-color: #808080;
-}
-
-#drawer-menu-icon {
-    background: url('Content/images/menu.png') no-repeat 50% 50%;
-    display: block;
-    position: fixed;
-    right: 1.5%;
-    width: 30px;
-    height: 30px;
-}
-
-#widget-icons {
-    height: 60%;
-}
-
-    #widget-icons > div {
-        width: 33%;
-        max-width: 33%;
-        float: left;
-    }
-
-    #widget-icons img {
-        width: 100%;
-        max-width: 100%;
-        height: 20%;
-    }
-
-#nav-wrapper div {
-    float: left;
-}
-
-#content {
-    height: 60%;
+.km-content {
+    overflow: hidden;
+    position: relative;
+    width: 100%;
 }
 
 #footer {
-    height: 28%;
+    background-color: rgba(244, 244, 244, 0.952941);
+}
+
+.km-scroll-container {
+    background-color: rgba(244, 244, 244, 0.952941);
+    height: 100%;
+    width: 100%;
+    position: absolute;
+}
+
+#home-left-column, #home-right-column {
+    float: left;
+    height: 75%;
+    width: 50%;
+}
+
+#aggression {
+    height: 25%;
+    width: 100%;
+    background-color: #FF6347;
+}
+
+#pre-alert {
+    height: 60%;
+    background-color: #FFA500;
+}
+
+#fire {
+    height: 25%;
+    background-color: #FFD700;
+}
+
+#rescues {
+    height: 40%;
+    background-color: #4169E1;
+}
+
+#emergency {
+    height: 75%;
+    background-color: #90EE90;
 }
 
 #gps-location-info {
-    height: 70%;
+    border-top: 1px solid rgba(180, 180, 180, 0.498039);
+    text-align: center;
+    height: 80%;
 }
 
-#nav-wrapper {
-    height: 30%;
+#footer-tabstrip {
+    height: 20%;
 }
+
+/*#flashlight-icon span {
+    background: url('../img/flashlight-icon.png') no-repeat 50% 50%;
+    width: 32px;
+    height: auto;
+}*/
+
+/*#eye-icon span {
+    background: url('../img/eye-icon.png') no-repeat 50% 50%;
+    width: 32px;
+    height: auto;
+}*/
