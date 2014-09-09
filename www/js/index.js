@@ -28,7 +28,12 @@ var app = {
         receivedElement.setAttribute('style', 'display:block;');
 
         console.log('Received Event: ' + id);
-    }
+    },
+
+    showAlert: function (e) {
+        this._currentAlert = new Alert(this, e.view);
+    },
+
 };
 
 $(function () {

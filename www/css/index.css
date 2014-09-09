@@ -106,13 +106,21 @@ body {
 
 .emergency-tile {
     height: 60%;
-    background-color: #90EE90;
+    background-color: #6BAD6B;
 }
 
 #gps-location-info {
     border-top: 1px solid rgba(180, 180, 180, 0.498039);
     text-align: center;
+    font-size: 0.5em;
     height: 65%;
+    width: 100%;
+    display: table;
+}
+
+.table-cell-middle {
+    display: table-cell;
+    vertical-align: middle;
 }
 
 #header-camera-icon, #header-flashlight-icon,
@@ -131,6 +139,8 @@ header-#flashlight-icon, #header-eye-icon,
 
     #header-tabstrip .km-custom, #footer-tabstrip .km-custom {
         -webkit-background-clip: initial;
+        -moz-background-clip: initial;
+        background-clip: initial;
         background-size: contain;
         background-repeat: no-repeat;
         text-align: center;
