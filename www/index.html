@@ -39,26 +39,17 @@
         </footer>
     </section>
 
-    <div id="home" data-role="view">
-        <div id="home-left-column">
-            <div id="pre-alert">PRE-ALERT</div>
-            <div id="rescues">RESCUES</div>
-        </div>
-        <div id="home-right-column">
-            <div id="fire">FIRE</div>
-            <div id="emergency">EMERGENCY</div>
-        </div>
-        <div class="clearfix"></div>
-        <div id="aggression">AGGRESSION</div>
-    </div>
-
     <script src="cordova.js"></script>
     <script src="js/libs/jquery-2.1.1.min.js"></script>
     <script src="js/libs/kendo.all.min.js"></script>
     <script src="js/index.js"></script>
 
     <script>
-        new kendo.mobile.Application(document.body, { layout: 'default' });
+        new kendo.mobile.Application($(document.body), {
+            layout: 'default',
+            initial: 'views/home.html',
+            transition: 'slide'
+        });
         app.initialize();
     </script>
 </body>

@@ -113,14 +113,14 @@ h1 {
 }
 
 #header {
-    height: 20%;
+    height: 15%;
     border-bottom: 1px solid rgba(180, 180, 180, 0.498039);
 }
 
 .km-content {
     overflow: hidden;
     position: relative;
-    height: 60%;
+    height: 65%;
     width: 100%;
 }
 
@@ -128,8 +128,12 @@ h1 {
     height: 20%;
 }
 
-.km-header > div {
-    height: 50%;
+.km-header div {
+    height: 25%;
+}
+
+.km-header div {
+    height: 75%;
 }
 
 #header > div, #footer > div, .km-scroll-container {
@@ -191,7 +195,7 @@ h1 {
 }
 
 header-#flashlight-icon, #header-eye-icon,
- #footer-helper-icon, #footer-arrow-icon, #footer-stethoscope-icon, #footer-location-icon {
+#footer-helper-icon, #footer-arrow-icon, #footer-stethoscope-icon, #footer-location-icon {
     border-left: 1px solid rgba(180, 180, 180, 0.498039);
 }
 
@@ -200,12 +204,8 @@ header-#flashlight-icon, #header-eye-icon,
 }
 
     #header-tabstrip .km-custom, #footer-tabstrip .km-custom {
-        -webkit-background-clip: border-box;
-        -moz-background-clip: border-box;
-        background-clip: border-box;
         background-repeat: no-repeat;
         background-size: contain;
-        display: inline-block;
         height: 100%;
         width: 100%;
     }
