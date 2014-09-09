@@ -17,11 +17,9 @@ body {
     -moz-user-select: none;
     -ms-user-select: none;
     user-select: none; /* prevent copy paste, to allow, change 'none' to 'text' */
-
     font-family: 'Helvetica_Condensed' !important;
     text-transform: uppercase;
-    font-size: 2em;
-
+    font-size: 2.4em !important;
     height: 100%;
     width: 100%;
     margin: 0;
@@ -79,35 +77,35 @@ body {
         text-align: center;
     }
 
-#home-left-column, #home-right-column {
+.left-column75, .right-column75 {
     float: left;
     height: 75%;
     width: 50%;
 }
 
-#aggression {
+.aggression-tile {
     height: 25%;
     width: 100%;
     background-color: #FF6347;
 }
 
-#pre-alert {
+.pre-alert-tile {
     height: 60%;
     background-color: #FFA500;
 }
 
-#fire {
-    height: 25%;
+.fire-tile {
+    height: 40%;
     background-color: #FFD700;
 }
 
-#rescues {
+.rescues-tile {
     height: 40%;
     background-color: #4169E1;
 }
 
-#emergency {
-    height: 75%;
+.emergency-tile {
+    height: 60%;
     background-color: #90EE90;
 }
 
@@ -132,11 +130,13 @@ header-#flashlight-icon, #header-eye-icon,
 }
 
     #header-tabstrip .km-custom, #footer-tabstrip .km-custom {
+        -webkit-background-clip: initial;
+        background-size: contain;
         background-repeat: no-repeat;
         text-align: center;
         width: 100%;
     }
-    
+
 #header-drawer-icon .km-custom:after,
 #header-drawer-icon .km-custom:before {
     content: "\e077";
