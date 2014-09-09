@@ -18,36 +18,38 @@
             <div data-role="navbar">
                 <a data-align="right" data-icon="more" data-role="button" href="#"></a>
             </div>
-            <div data-role="tabstrip">
-                <a href="#" id="camera-icon" data-icon="camera"></a>
-                <a href="#" id="flashlight-icon" data-icon="fastforward"></a>
-                <a href="#" id="eye-icon" data-icon="settings"></a>
+            <div data-role="tabstrip" id="header-tabstrip">
+                <a href="#" id="header-camera-icon" data-icon="custom"></a>
+                <a href="#" id="header-flashlight-icon" data-icon="custom"></a>
+                <a href="#" id="header-eye-icon" data-icon="custom"></a>
             </div>
         </header>
         <!--View content will render here-->
         <footer data-role="footer" id="footer">
-            <div id="gps-location-info">Times Square,<br />Manhattan, New York<br/>United States</div>
+            <div id="gps-location-info">
+                <span>Times Square,<br />Manhattan, New York<br />United States</span>
+            </div>
             <div data-role="tabstrip" id="footer-tabstrip">
-                <a href="#home" data-icon="home"></a>
-                <a href="views/home.html" data-icon="home"></a>
-                <a href="#home" data-icon="home"></a>
-                <a href="#home" data-icon="home"></a>
-                <a href="#home" data-icon="home"></a>
+                <a href="#home" id="footer-home-icon" data-icon="custom"></a>
+                <a href="views/helper.html" id="footer-helper-icon" data-icon="custom"></a>
+                <a href="views/arrow.html" id="footer-arrow-icon" data-icon="custom"></a>
+                <a href="views/stethoscope.html" id="footer-stethoscope-icon" data-icon="custom"></a>
+                <a href="views/location.html" id="footer-location-icon" data-icon="custom"></a>
             </div>
         </footer>
     </section>
 
     <div id="home" data-role="view">
         <div id="home-left-column">
-            <div id="pre-alert">a</div>
-            <div id="rescues">d</div>
+            <div id="pre-alert">PRE-ALERT</div>
+            <div id="rescues">RESCUES</div>
         </div>
         <div id="home-right-column">
-            <div id="fire">s</div>
-            <div id="emergency">f</div>
+            <div id="fire">FIRE</div>
+            <div id="emergency">EMERGENCY</div>
         </div>
         <div class="clearfix"></div>
-        <div id="aggression">g</div>
+        <div id="aggression">AGGRESSION</div>
     </div>
 
     <script src="cordova.js"></script>
@@ -58,10 +60,6 @@
     <script>
         new kendo.mobile.Application(document.body, { layout: 'default' });
         app.initialize();
-
-        $(function () {
-            $('#camera-icon').removeClass('km-state-active');
-        });
     </script>
 </body>
 </html>
