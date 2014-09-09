@@ -19,7 +19,7 @@ body {
     user-select: none; /* prevent copy paste, to allow, change 'none' to 'text' */
     font-family: 'Helvetica_Condensed' !important;
     text-transform: uppercase;
-    font-size: 5em !important;
+    font-size: 6em !important;
     height: 100%;
     width: 100%;
     margin: 0;
