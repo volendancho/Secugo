@@ -184,3 +184,7 @@ header-#flashlight-icon, #header-eye-icon,
 #footer-location-icon .km-custom {
     background-image: url('../img/location_normal.png');
 }
+
+.left-column75 img, .right-column75 img, .aggression-tile img {
+    width: 30%;
+}

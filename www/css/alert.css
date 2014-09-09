@@ -1,0 +1,14 @@
+div#alert .left-column75,
+div#alert .right-column75 {
+    height: 30%;
+}
+div#alert .rescues-tile, 
+div#alert .stop-alert-tile {
+    height: 100%;
+}
+div#alert .stop-alert-tile {
+    background-color: #888888;
+}
+div#alert .safe-places-tile {
+    background-color: #579657;
+}
