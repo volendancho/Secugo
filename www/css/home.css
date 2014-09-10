@@ -1,0 +1,19 @@
+.km-widget.km-view#home .tile-column {
+    height: 75%;
+}
+
+.km-widget.km-view#home .tile.aggression {
+    height: 25%;
+}
+.km-widget.km-view#home .tile.pre-alert {
+    height: 60%;
+}
+.km-widget.km-view#home .tile.fire {
+    height: 40%;
+}
+.km-widget.km-view#home .tile.rescues {
+    height: 40%;
+}
+.km-widget.km-view#home .tile.emergency {
+    height: 60%;
+}

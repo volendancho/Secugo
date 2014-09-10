@@ -1,0 +1,81 @@
+* {
+    -webkit-tap-highlight-color: rgba(0,0,0,0); /* make transparent link selection, adjust last value opacity 0 to 1.0 */
+}
+
+@font-face {
+    font-family: 'Helvetica_Condensed';
+    src: url('../fonts/helvetica-67-medium-condensed.ttf');
+}
+
+body {
+    -webkit-touch-callout: none; /* prevent callout to copy image, etc when tap to hold */
+    -webkit-text-size-adjust: none;
+    -moz-text-size-adjust: none;
+    -ms-text-size-adjust: none;
+    text-size-adjust: none; /* prevent webkit from resizing text to fit */
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none; /* prevent copy paste, to allow, change 'none' to 'text' */
+    font-family: 'Helvetica_Condensed' !important;
+    text-transform: uppercase;
+    font-size: 6em !important;
+    height: 100%;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+a {
+    text-decoration: none;
+}
+
+.clearfix {
+    clear: both;
+}
+
+/* TILES */
+.tile-column {
+    float: left;
+    width: 50%;
+}
+.tile {
+    position: relative;
+}
+.tile > div,
+.tile > a > div{
+    width: 100%;
+    position: absolute;
+    text-align: center;
+}
+.tile > div:first-child,
+.tile > a > div:first-child {
+    top: 30px;
+}
+.tile > div:last-child,
+.tile > a > div:last-child {
+    bottom: 10px;
+}
+
+.tile.aggression {
+    background-color: #FF6347;
+}
+.tile.pre-alert {
+    background-color: #FFA500;
+}
+.tile.fire {
+    background-color: #FFD700;
+}
+.tile.rescues {
+    background-color: #4169E1;
+}
+.tile.emergency {
+    background-color: #6BAD6B;
+}
+.tile.stop-alert {
+    background-color: #888888;
+}
+.tile.safe-places {
+    background-color: #579657;
+}
+/* END TILES */
