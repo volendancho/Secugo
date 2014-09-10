@@ -16,7 +16,6 @@ var app = {
     // function, we must explicitly call 'app.receivedEvent(...);'
     onDeviceReady: function() {
         app.receivedEvent('deviceready');
-        $('#camera-icon').removeClass('km-state-active');
     },
     // Update DOM on a Received Event
     receivedEvent: function(id) {

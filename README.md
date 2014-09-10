@@ -1,3 +1,1 @@
-Secugo
-======
-Secugo mobile app
+Secugo is your free worldwide security network.

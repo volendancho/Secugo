@@ -1,31 +1,3 @@
-* {
-    -webkit-tap-highlight-color: rgba(0,0,0,0); /* make transparent link selection, adjust last value opacity 0 to 1.0 */
-}
-
-@font-face {
-    font-family: 'Helvetica_Condensed';
-    src: url('../fonts/helvetica-67-medium-condensed.ttf');
-}
-
-body {
-    -webkit-touch-callout: none; /* prevent callout to copy image, etc when tap to hold */
-    -webkit-text-size-adjust: none;
-    -moz-text-size-adjust: none;
-    -ms-text-size-adjust: none;
-    text-size-adjust: none; /* prevent webkit from resizing text to fit */
-    -webkit-user-select: none;
-    -moz-user-select: none;
-    -ms-user-select: none;
-    user-select: none; /* prevent copy paste, to allow, change 'none' to 'text' */
-    font-family: 'Helvetica_Condensed' !important;
-    text-transform: uppercase;
-    font-size: 6em !important;
-    height: 100%;
-    width: 100%;
-    margin: 0;
-    padding: 0;
-}
-
 .km-android .km-view:not(.km-splitview) {
     -webkit-box-direction: normal;
     -moz-box-direction: normal;
@@ -34,24 +6,11 @@ body {
     flex-direction: column;
 }
 
-.clearfix {
-    clear: both;
-}
-
-#header {
-    height: 15%;
-    border-bottom: 1px solid rgba(180, 180, 180, 0.498039);
-}
-
 .km-content {
     overflow: hidden;
     position: relative;
     height: 65%;
     width: 100%;
-}
-
-#footer {
-    height: 20%;
 }
 
 .km-header .km-navbar {
@@ -62,52 +21,27 @@ body {
     height: 60%;
 }
 
-#header > div, #footer > div, .km-scroll-container {
-    background-color: #ccc;
-}
-
 .km-scroll-container {
     height: 100%;
     width: 100%;
     position: absolute;
 }
 
-    .km-scroll-container > div > div {
-        vertical-align: middle;
-        text-align: center;
+
+
+#header {
+    height: 15%;
+    border-bottom: 1px solid rgba(180, 180, 180, 0.498039);
+}
+
+#footer {
+    height: 20%;
+}
+
+    #header > div, #footer > div, .km-scroll-container {
+        background-color: #ccc;
     }
 
-.left-column75, .right-column75 {
-    float: left;
-    height: 75%;
-    width: 50%;
-}
-
-.aggression-tile {
-    height: 25%;
-    width: 100%;
-    background-color: #FF6347;
-}
-
-.pre-alert-tile {
-    height: 60%;
-    background-color: #FFA500;
-}
-
-.fire-tile {
-    height: 40%;
-    background-color: #FFD700;
-}
-
-.rescues-tile {
-    height: 40%;
-    background-color: #4169E1;
-}
-
-.emergency-tile {
-    height: 60%;
-    background-color: #6BAD6B;
-}
 
 #gps-location-info {
     border-top: 1px solid rgba(180, 180, 180, 0.498039);
@@ -138,10 +72,6 @@ header-#flashlight-icon, #header-eye-icon,
 }
 
     #header-tabstrip .km-custom, #footer-tabstrip .km-custom {
-        -webkit-background-clip: initial;
-        -moz-background-clip: initial;
-        background-clip: initial;
-        background-size: contain;
         background-repeat: no-repeat;
         text-align: center;
         width: 100%;
@@ -153,38 +83,42 @@ header-#flashlight-icon, #header-eye-icon,
     content: "\e077";
 }
 
-#header-camera-icon .km-custom {
-    background-image: url('../img/camera.png');
+#header-camera-icon .km-custom:after,
+#header-camera-icon .km-custom:before {
+    content: "\e0d0";
 }
 
-#header-flashlight-icon .km-custom {
-    background-image: url('../img/tourch.png');
+#header-flashlight-icon .km-custom:after,
+#header-flashlight-icon .km-custom:before {
+    content: "\e0b5";
 }
 
-#header-eye-icon .km-custom {
-    background-image: url('../img/Passeye.png');
+#header-eye-icon .km-custom:after,
+#header-eye-icon .km-custom:before {
+    content: "\e09b";
 }
 
-#footer-home-icon .km-custom {
-    background-image: url('../img/home_normal.png');
+#footer-home-icon .km-custom:after,
+#footer-home-icon .km-custom:before {
+    content: "\e0dd";
 }
 
-#footer-helper-icon .km-custom {
-    background-image: url('../img/helper.png');
+#footer-helper-icon .km-custom:after,
+#footer-helper-icon .km-custom:before {
+    content: "\e0e4";
 }
 
-#footer-arrow-icon .km-custom {
-    background-image: url('../img/arrow_normal.png');
+#footer-arrow-icon .km-custom:after,
+#footer-arrow-icon .km-custom:before {
+    content: "\e016";
 }
 
-#footer-stethoscope-icon .km-custom {
-    background-image: url('../img/stethoscope_normal.png');
+#footer-stethoscope-icon .km-custom:after,
+#footer-stethoscope-icon .km-custom:before {
+    content: "\e043";
 }
 
-#footer-location-icon .km-custom {
-    background-image: url('../img/location_normal.png');
-}
-
-.left-column75 img, .right-column75 img, .aggression-tile img {
-    width: 30%;
+#footer-location-icon .km-custom:after,
+#footer-location-icon .km-custom:before {
+    content: "\e0db";
 }
