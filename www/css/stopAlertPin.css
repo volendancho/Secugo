@@ -1,0 +1,29 @@
+.km-widget.km-view#stopAlertPin div.km-scroll-container > div {
+    text-align: center;
+    padding: 5px 0 0 0;
+}
+
+.km-widget.km-view#stopAlertPin div.km-scroll-container > div:nth-child(2) > input[type=password] {
+    font-size: 1.3em;
+    width: 60%;
+    border: solid 1px  #007AFF;
+    border-radius: 3px 3px;
+}
+
+.km-widget.km-view#stopAlertPin div.km-scroll-container > div:last-child > div {
+    float: left;
+    text-align: center;
+    width: 30%;
+    height: 60px;
+    margin: 5px;
+    position: relative;
+    line-height: 40px;
+}
+.km-widget.km-view#stopAlertPin div.km-scroll-container > div:last-child > div.number > button {
+    border-radius: 50px 50px;
+    width: 60px;
+    line-height: 40px;
+}
+.km-widget.km-view#stopAlertPin div.km-scroll-container > div:last-child > div.button > button {
+    width: 100%;
+}

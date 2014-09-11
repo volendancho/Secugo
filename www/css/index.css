@@ -5,18 +5,22 @@
     -ms-flex-direction: column;
     flex-direction: column;
 }
+
 .km-content {
     overflow: hidden;
     position: relative;
     height: 65%;
     width: 100%;
 }
+
 .km-header .km-navbar {
     height: 40%;
 }
+
 .km-header .km-tabstrip {
     height: 60%;
 }
+
 .km-scroll-container {
     height: 100%;
     width: 100%;
@@ -34,9 +38,9 @@
     height: 20%;
 }
 
-#header > div, #footer > div, .km-scroll-container {
-    background-color: #ccc;
-}
+    #header > div, #footer > div, .km-scroll-container {
+        background-color: #ccc;
+    }
 
 
 #gps-location-info {
@@ -68,49 +72,57 @@ header-#flashlight-icon, #header-eye-icon,
 }
 
     #header-tabstrip .km-custom, #footer-tabstrip .km-custom {
-        -webkit-background-clip: initial;
-        -moz-background-clip: initial;
-        background-clip: initial;
-        background-size: contain;
         background-repeat: no-repeat;
         text-align: center;
         width: 100%;
         height: 100%;
     }
 
-#header-drawer-icon .km-custom:after,
-#header-drawer-icon .km-custom:before {
-    content: "\e077";
+#header-drawer-icon {
+    font-size: 0.7em;
 }
 
-#header-camera-icon .km-custom {
-    background-image: url('../img/camera.png');
+    #header-drawer-icon .km-custom:after,
+    #header-drawer-icon .km-custom:before {
+        content: "\e077";
+    }
+
+#header-camera-icon .km-custom:after,
+#header-camera-icon .km-custom:before {
+    content: "\e0d0";
 }
 
-#header-flashlight-icon .km-custom {
-    background-image: url('../img/tourch.png');
+#header-flashlight-icon .km-custom:after,
+#header-flashlight-icon .km-custom:before {
+    content: "\e0b5";
 }
 
-#header-eye-icon .km-custom {
-    background-image: url('../img/Passeye.png');
+#header-eye-icon .km-custom:after,
+#header-eye-icon .km-custom:before {
+    content: "\e09b";
 }
 
-#footer-home-icon .km-custom {
-    background-image: url('../img/home_normal.png');
+#footer-home-icon .km-custom:after,
+#footer-home-icon .km-custom:before {
+    content: "\e0dd";
 }
 
-#footer-helper-icon .km-custom {
-    background-image: url('../img/helper.png');
+#footer-helper-icon .km-custom:after,
+#footer-helper-icon .km-custom:before {
+    content: "\e0e4";
 }
 
-#footer-arrow-icon .km-custom {
-    background-image: url('../img/arrow_normal.png');
+#footer-arrow-icon .km-custom:after,
+#footer-arrow-icon .km-custom:before {
+    content: "\e016";
 }
 
-#footer-stethoscope-icon .km-custom {
-    background-image: url('../img/stethoscope_normal.png');
+#footer-stethoscope-icon .km-custom:after,
+#footer-stethoscope-icon .km-custom:before {
+    content: "\e043";
 }
 
-#footer-location-icon .km-custom {
-    background-image: url('../img/location_normal.png');
+#footer-location-icon .km-custom:after,
+#footer-location-icon .km-custom:before {
+    content: "\e0db";
 }

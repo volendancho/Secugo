@@ -1,9 +1,9 @@
 .km-widget.km-view#home .tile-column {
-    height: 75%;
+    height: 70%;
 }
 
 .km-widget.km-view#home .tile.aggression {
-    height: 25%;
+    height: 30%;
 }
 .km-widget.km-view#home .tile.pre-alert {
     height: 60%;

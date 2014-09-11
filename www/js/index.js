@@ -1,7 +1,15 @@
 var app = {
     // Application Constructor
     initialize: function() {
+        this.initKendo();
         this.bindEvents();
+    },
+    initKendo: function () {
+        this.kendoApp = new kendo.mobile.Application(document.body, {
+            layout: 'default',
+            initial: 'views/home.html',
+            transition: 'slide'
+        });
     },
     // Bind Event Listeners
     //
@@ -16,7 +24,6 @@ var app = {
     // function, we must explicitly call 'app.receivedEvent(...);'
     onDeviceReady: function() {
         app.receivedEvent('deviceready');
-        $('#camera-icon').removeClass('km-state-active');
     },
     // Update DOM on a Received Event
     receivedEvent: function(id) {
@@ -30,12 +37,7 @@ var app = {
         console.log('Received Event: ' + id);
     },
 
-    showAlert: function (e) {
-        this._currentAlert = new Alert(this, e.view);
-    },
 
+    kendoApp: null,
+    activeAlert: null,
 };
-
-$(function () {
-    $('#camera-icon').removeClass('km-state-active');
-});

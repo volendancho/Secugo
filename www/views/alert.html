@@ -1,6 +1,6 @@
-﻿<div id="alert" data-role="view" data-show="app.showAlert">
+﻿<div id="alert" data-role="view" data-show="app.onAlertViewShow" data-model="app.alertView">
     <div class="tile-column">
-        <div class="tile stop-alert">
+        <div class="tile stop-alert" data-bind="events: { click: stopAlertClick }">
             <div>
                 <img src="img/stopPreAlert.png" />
             </div>
@@ -21,9 +21,7 @@
     </div>
     <div class="clearfix"></div>
     <div class="tile aggression">
-        <div>
-            <img src="img/home_aggression.png" />
-        </div>
+        <div data-bind="text: AlertTimeout"></div>
         <div>
             Aggression & Threat
         </div>

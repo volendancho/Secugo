@@ -9,3 +9,6 @@
 .km-widget.km-view#alert .tile.safe-places {
     height: 30%;
 }
+.km-widget.km-view#alert .tile.aggression > div:first-child {
+    font-size: 2.5em;
+}

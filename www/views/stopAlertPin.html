@@ -1,0 +1,48 @@
+﻿<div id="stopAlertPin" data-role="view" data-show="app.onStopAlertPinViewShow" data-model="app.stopAlertPinView">
+    <div>
+        <span data-bind="text: RemainingAttempts"></span>
+        <span>remainig attempts</span>
+    </div>
+    <div>
+        <input type="password" data-bind="value: PIN" readonly="readonly" />
+        <button data-role="button" data-bind="events: { click: resetPin }">Reset</button>
+    </div>
+    <div class="number-pad">
+        <div class="number">
+            <button data-role="button" data-bind="events: { click: enterPin }">1</button>
+        </div>
+        <div class="number">
+            <button data-role="button" data-bind="events: { click: enterPin }">2</button>
+        </div>
+        <div class="number">
+            <button data-role="button" data-bind="events: { click: enterPin }">3</button>
+        </div>
+        <div class="number">
+            <button data-role="button" data-bind="events: { click: enterPin }">4</button>
+        </div>
+        <div class="number">
+            <button data-role="button" data-bind="events: { click: enterPin }">5</button>
+        </div>
+        <div class="number">
+            <button data-role="button" data-bind="events: { click: enterPin }">6</button>
+        </div>
+        <div class="number">
+            <button data-role="button" data-bind="events: { click: enterPin }">7</button>
+        </div>
+        <div class="number">
+            <button data-role="button" data-bind="events: { click: enterPin }">8</button>
+        </div>
+        <div class="number">
+            <button data-role="button" data-bind="events: { click: enterPin }">9</button>
+        </div>
+        <div class="button">
+            <button data-role="button" data-bind="events: { click: goBack }">Cancel</button>
+        </div>
+        <div class="number">
+            <button data-role="button" data-bind="events: { click: enterPin }">0</button>
+        </div>
+        <div class="button">
+            <button data-role="button" data-bind="events: { click: confirmPin }">OK</button>
+        </div>
+    </div>
+</div>
