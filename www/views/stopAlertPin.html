@@ -1,3 +1,24 @@
 ﻿<div id="stopAlertPin" data-role="view" data-show="app.onStopAlertPinViewShow" data-model="app.stopAlertPinView">
-    <button data-role="button" data-bind="events: { click: _goBack }">Back</button>
+    <div id="remAttempts">
+        <span>3</span>
+        <span>remainig attempts</span>
+    </div>
+    <div>
+        <input type="password" />
+        <button data-role="button" data-bind="events: { click: resetPin }">Reset</button>
+    </div>
+    <div class="number-pad">
+        <div>1</div>
+        <div>2</div>
+        <div>3</div>
+        <div>4</div>
+        <div>5</div>
+        <div>6</div>
+        <div>7</div>
+        <div>8</div>
+        <div>9</div>
+        <div>0</div>
+    </div>
+    <button data-role="button" data-bind="events: { click: goBack }">Cancel</button>
+    <button data-role="button" data-bind="events: { click: confirmPin }">OK</button>
 </div>

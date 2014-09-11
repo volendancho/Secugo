@@ -42,21 +42,10 @@
   <gap:plugin name="org.apache.cordova.network-information" />
   <gap:plugin name="org.apache.cordova.splashscreen" />
   <gap:plugin name="org.apache.cordova.vibration" />
+
+  <!--Fix status bar bug in iOS-->
   <gap:plugin name="com.phonegap.plugin.statusbar" />
   <preference name="StatusBarOverlaysWebView" value="true" />
-
-  <!-- ios-darkstatusbar is only supported by phonegap 3.1.0 --><!--
-  <preference name="phonegap-version" value="3.1.0" />
-  --><!-- make the statusbar black --><!--
-  <preference name="ios-darkstatusbar" value="true" />
-
-  --><!-- this code makes the statusbar text white --><!--
-  <gap:config-file platform="ios" parent="UIViewControllerBasedStatusBarAppearance">
-    <false/>
-  </gap:config-file>
-  <gap:config-file platform="ios" parent="UIStatusBarStyle">
-    <string>UIStatusBarStyleLightContent</string>
-  </gap:config-file>-->
 
   <icon src="icon.png" />
   <icon gap:platform="android" gap:qualifier="ldpi" src="res/icon/android/icon-36-ldpi.png" />

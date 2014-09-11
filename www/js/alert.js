@@ -22,7 +22,7 @@ AlertView = ObservableView.extend({
     _stopAlert: function () {
         // TODO: AJAX to stop alert
         this._app.currentAlert = null;
-        this._goBack();
+        this.goBack();
     },
 });
 
