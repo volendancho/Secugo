@@ -1,18 +1,8 @@
-StopAlertPinView = kendo.data.ObservableObject.extend({
-    init: function (app) {
-        kendo.data.ObservableObject.fn.init.apply(this, [this]);
-        this._app = app;
+StopAlertPinView = ObservableView.extend({
+    _initView: function () {
+        ObservableView.fn._initView.call(this);
+        // TODO: ...
     },
-    reset: function (view) {
-        this._view = view;
-    },
-
-    _goBack: function () {
-        this._app.kendoApp.navigate('#:back');
-    },
-
-    _app: null,
-    _view: null
 });
 
 
