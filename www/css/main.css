@@ -19,6 +19,7 @@ body {
     user-select: none; /* prevent copy paste, to allow, change 'none' to 'text' */
     font-family: 'Helvetica_Condensed' !important;
     text-transform: uppercase;
+    font-size: 1.4em !important;
     height: 100%;
     width: 100%;
     margin: 0;
@@ -41,18 +42,15 @@ a {
 .tile {
     position: relative;
 }
-.tile > div,
-.tile > a > div{
+.tile > div {
     width: 100%;
     position: absolute;
     text-align: center;
 }
-.tile > div:first-child,
-.tile > a > div:first-child {
-    top: 30px;
+.tile > div:first-child {
+    top: 0;
 }
-.tile > div:last-child,
-.tile > a > div:last-child {
+.tile > div:last-child {
     bottom: 10px;
 }
 

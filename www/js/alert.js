@@ -9,4 +9,4 @@ Alert.prototype = {
 
     _view: null,
     _type: null
-}
+};
