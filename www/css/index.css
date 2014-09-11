@@ -78,10 +78,14 @@ header-#flashlight-icon, #header-eye-icon,
         height: 100%;
     }
 
-#header-drawer-icon .km-custom:after,
-#header-drawer-icon .km-custom:before {
-    content: "\e077";
+#header-drawer-icon {
+    font-size: 0.7em;
 }
+
+    #header-drawer-icon .km-custom:after,
+    #header-drawer-icon .km-custom:before {
+        content: "\e077";
+    }
 
 #header-camera-icon .km-custom:after,
 #header-camera-icon .km-custom:before {

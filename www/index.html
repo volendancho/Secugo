@@ -14,12 +14,14 @@
     <script type="text/javascript" src="js/libs/kendo.mobile.min.js"></script>
     <script type="text/javascript" src="js/index.js"></script>
     <script type="text/javascript" src="js/alert.js"></script>
+    <script type="text/javascript" src="js/stopAlertPin.js"></script>
 
     <!-- Default Stylesheet -->
     <link rel="stylesheet" href="css/main.css" />
     <link rel="stylesheet" href="css/index.css" />
     <link rel="stylesheet" href="css/home.css" />
     <link rel="stylesheet" href="css/alert.css" />
+    <link rel="stylesheet" href="css/stopAlertPin.css" />
 </head>
 <body>
     <section data-role="layout" data-id="default">
@@ -51,11 +53,6 @@
     </section>
 
     <script>
-        new kendo.mobile.Application(document.body, {
-            layout: 'default',
-            initial: 'views/home.html',
-            transition: 'slide'
-        });
         app.initialize();
     </script>
 </body>

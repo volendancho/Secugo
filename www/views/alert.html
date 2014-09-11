@@ -1,6 +1,6 @@
-﻿<div id="alert" data-role="view" data-show="app.showAlert">
+﻿<div id="alert" data-role="view" data-show="app.onAlertViewShow" data-model="app.alertView">
     <div class="tile-column">
-        <div class="tile stop-alert">
+        <div class="tile stop-alert" data-bind="events: { click: stopAlertClick }">
             <div>
                 <img src="img/stopPreAlert.png" />
             </div>
