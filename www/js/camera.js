@@ -14,7 +14,7 @@ CameraView = ObservableView.extend({
     },
 
     cameraClick: function () {
-        $(event.target).closest('div.tile').html('<h1>OK</h1>');
+        $(event.target).closest('div.tile').html('<h1>' + (this._camera != null) + '</h1>');
         //this._camera.capturePhoto();
     },
     closePhotoClick: function () {
