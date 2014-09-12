@@ -3,19 +3,19 @@ CameraView = ObservableView.extend({
         ObservableView.fn.init.call(this, app);
 
         var that = this;
-        this._camera = new CameraWrapper(
-            function () {
-                that._photoCaptured.apply(this, arguments);
-            },
-            function () {
-                that._fileOpened.apply(this, arguments);
-            }
-        );
+        //this._camera = new CameraWrapper(
+        //    function () {
+        //        that._photoCaptured.apply(this, arguments);
+        //    },
+        //    function () {
+        //        that._fileOpened.apply(this, arguments);
+        //    }
+        //);
     },
 
     cameraClick: function () {
-        alert('capturing');
-        this._camera.capturePhoto();
+        $(event.target).closest('div.tile').html('<h1>OK</h1>');
+        //this._camera.capturePhoto();
     },
     closePhotoClick: function () {
         this._resetImage();
