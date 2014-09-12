@@ -14,6 +14,7 @@ CameraView = ObservableView.extend({
     },
 
     cameraClick: function () {
+        alert('capturing');
         this._camera.capturePhoto();
     },
     closePhotoClick: function () {
