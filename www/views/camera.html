@@ -1,0 +1,43 @@
+﻿<div id="camera" data-role="view" data-show="app.onCameraViewShow" data-model="app.cameraView">
+    <div class="tile-column" data-bind="invisible: Captured">
+        <div class="tile camera" data-bind="events: { click: cameraClick }">
+            <div>
+                <img src="img/optioncamera.png" />
+            </div>
+            <div>
+                Camera
+            </div>
+        </div>
+        <div class="tile family">
+            <div>
+                <img src="img/family.png" />
+            </div>
+            <div>
+                Family
+            </div>
+        </div>
+    </div>
+    <div class="tile-column" data-bind="invisible: Captured">
+        <div class="tile album">
+            <div>
+                <img src="img/album.png" />
+            </div>
+            <div>
+                Album
+            </div>
+        </div>
+        <div class="tile file">
+            <div>
+                <img src="img/file.png" />
+            </div>
+            <div>
+                Safe File
+            </div>
+        </div>
+    </div>
+    <div class="clearfix"></div>
+    <div data-bind="visible: Captured">
+        <!--<img data-bind="src: ImageUri, visible: Captured" />-->
+        <button data-role="button" data-bind="events: { click: closePhotoClick }">Close</button>
+    </div>
+</div>
