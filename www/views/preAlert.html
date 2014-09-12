@@ -1,4 +1,4 @@
-﻿<div id="preAlert" data-role="view" data-show="app.onPreAlertViewShow" data-model="app.preAlertView">
+﻿<div id="preAlert" data-role="view" data-show="app.onPreAlertViewShow" data-hide="app.onPreAlertViewHide" data-model="app.preAlertView">
     <div class="countdown">
         <div class="countdown-icon-row">
             <div class="rescue-icon">
@@ -9,20 +9,24 @@
             </div>
             <div class="clearfix"></div>
         </div>
-        <div class="timer">
+        <div class="countdown-timer">
+            <div class="timer-wrapper">
+                1:00
+            </div>
+            <div class="timer-labels-row">
+                <div class="minutes">mns</div>
+                <div class="seconds">secs</div>
+                <div class="clearfix"></div>
+            </div>
+        </div>
+        <div class="countdown-minutes">
             <div>
                 Select
             </div>
             <div class="timer-minutes">
-                <div>
-
-                </div>
-                <div>
-
-                </div>
-                <div>
-
-                </div>
+                <div data-bind="events: { click: showTimer1Minute }">1</div>
+                <div data-bind="events: { click: showTimer2Minutes }">2</div>
+                <div data-bind="events: { click: showTimer3Minutes }">3</div>
             </div>
             <div class="clearfix"></div>
             <div>
