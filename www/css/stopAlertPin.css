@@ -8,6 +8,7 @@
     width: 60%;
     border: solid 1px  #007AFF;
     border-radius: 3px 3px;
+    color: black;
 }
 
 .km-widget.km-view#stopAlertPin div.km-scroll-container > div:last-child > div {

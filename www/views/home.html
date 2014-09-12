@@ -1,15 +1,13 @@
-﻿<div id="home" data-role="view" data-transition="slide:right">
+﻿<div id="home" data-role="view" data-transition="slide:right" data-show="app.onHomeViewShow" data-model="app.homeView">
     <div class="tile-column">
-        <a href="#views/preAlert.html">
-            <div class="tile pre-alert">
-                <div>
-                    <img src="img/home_pre_alert.png" />
-                </div>
-                <div>
-                    Pre-Alert
-                </div>
+        <div class="tile pre-alert" data-bind="events: { click: goToPreAlert }">
+            <div>
+                <img src="img/home_pre_alert.png" />
             </div>
-        </a>
+            <div>
+                Pre-Alert
+            </div>
+        </div>
         <div class="tile rescues">
             <div>
                 <img src="img/home_rescues.png" />
@@ -20,36 +18,30 @@
         </div>
     </div>
     <div class="tile-column">
-        <a href="#views/alert.html?type=fire">
-            <div class="tile fire">
-                <div>
-                    <img src="img/home_fire.png" />
-                </div>
-                <div>
-                    Fire
-                </div>
-            </div>
-        </a>
-        <a href="#views/alert.html?type=emergency">
-            <div class="tile emergency">
-                <div>
-                    <img src="img/home_medical.png" />
-                </div>
-                <div>
-                    Emergency
-                </div>
-            </div>
-        </a>
-    </div>
-    <div class="clearfix"></div>
-    <a href="#views/alert.html?type=aggression">
-        <div class="tile aggression">
+        <div class="tile fire" data-bind="events: { click: goToAlertFire }">
             <div>
-                <img src="img/home_aggression.png" />
+                <img src="img/home_fire.png" />
             </div>
             <div>
-                Aggression
+                Fire
             </div>
         </div>
-    </a>
+        <div class="tile emergency" data-bind="events: { click: goToAlertEmergency }">
+            <div>
+                <img src="img/home_medical.png" />
+            </div>
+            <div>
+                Emergency
+            </div>
+        </div>
+    </div>
+    <div class="clearfix"></div>
+    <div class="tile aggression" data-bind="events: { click: goToAlertAggression }">
+        <div>
+            <img src="img/home_aggression.png" />
+        </div>
+        <div>
+            Aggression
+        </div>
+    </div>
 </div>

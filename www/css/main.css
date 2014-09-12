@@ -27,9 +27,18 @@ a {
     text-decoration: none !important;
 }
 
-.clearfix {
-    clear: both;
-}
+/* For IE 6/7 only */  
+.clearfix {  
+    *zoom: 1;  
+}  
+.clearfix:before,  
+.clearfix:after {  
+    content: " ";  
+    display: table;  
+}  
+.clearfix:after {  
+    clear: both;  
+}  
 
 /* TILES */
 .tile-column {

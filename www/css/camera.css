@@ -1,0 +1,17 @@
+.km-widget.km-view#camera .tile-column {
+    height: 100%;
+}
+.km-widget.km-view#camera .tile {
+    height: 50%;
+}
+.km-widget.km-view#camera .tile > div {
+    padding: 20px 20px 20px 20px;
+}
+.km-widget.km-view#camera .tile.camera,
+.km-widget.km-view#camera .tile.file {
+    background-color: #368cc4;
+}
+.km-widget.km-view#camera .tile.family,
+.km-widget.km-view#camera .tile.album {
+    background-color: #59a9dd;
+}

@@ -10,6 +10,12 @@ AlertView = ObservableView.extend({
             }
         }
     },
+    aggressionThreatClick: function () {
+        if (!this._alertStarted) {
+            this._stopAlertTimer();
+            this._startAlert();
+        }
+    },
     stopByPin: function () {
         this._stoppedByPin = true;
         this._stopAlert();
@@ -52,11 +58,11 @@ AlertView = ObservableView.extend({
     _startAlert: function () {
         this._alertStarted = true;
         this._app.currentAlert = {
-                deviceUUID: '', // TODO: Get device UUID.
-                id: 100,
-                type: this._view.params.type
+            deviceUUID: '', // TODO: Get device UUID.
+            id: 100,
+            type: this._view.params.type
         }; // TODO: AJAX to send notification + Receive ID.
-        this.set('AlertTimeout', 'Alert sent!');
+        this.set('AlertTimeout', 'Alert sent');
     },
     _stopAlert: function () {
         this._stopAlertTimer();
