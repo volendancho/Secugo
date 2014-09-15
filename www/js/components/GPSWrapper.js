@@ -1,5 +1,5 @@
 ﻿function GPSWrapper() {
-    _getGeolocation();
+    this._getGeolocation();
 }
 
 GPSWrapper.prototype = {
@@ -7,13 +7,13 @@ GPSWrapper.prototype = {
     _getGeolocation: function () {
         //var options = { timeout: 30000, enableHighAccuracy: true };
         var options = { enableHighAccuracy: true };
-        navigator.geolocation.getCurrentPosition(_getPosition, _positionError, options);
+        navigator.geolocation.getCurrentPosition(this._getPosition, this._positionError, options);
     },
 
     _getPosition: function (position) {
         var latitude = position.coords.latitude;
         var longitude = position.coords.longitude;
-        _reverseGeocode(latitude, longitude);
+        this._reverseGeocode(latitude, longitude);
     },
 
     _positionError: function () {

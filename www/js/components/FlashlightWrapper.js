@@ -1,9 +1,11 @@
 ﻿function FlashlightWrapper() {
     var that = this;
-    this._flashlight = window.plugins.flashlight;
-    this._flashlight.available(function (isAvailable) {
-        that._available = isAvailable;
-    });
+    if (window.window.plugins && window.plugins.flashlight) {
+        this._flashlight = window.plugins.flashlight;
+        this._flashlight.available(function (isAvailable) {
+            that._available = isAvailable;
+        });
+    }
 }
 
 FlashlightWrapper.prototype = {
@@ -24,6 +26,6 @@ FlashlightWrapper.prototype = {
         }
     },
 
-    _available: null,
+    _available: false,
     _flashlight: null,
 };
