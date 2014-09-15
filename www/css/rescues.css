@@ -1,0 +1,12 @@
+.km-widget.km-view#rescues .tile-column {
+    height: 100%;
+}
+.km-widget.km-view#rescues div.tile-column:first-of-type > .tile {
+    height: 100%;
+}
+.km-widget.km-view#rescues div.tile-column:nth-of-type(2) > .tile {
+    height: 50%;
+}
+.km-widget.km-view#rescues .tile > div {
+    padding: 20px 0 20px 0;
+}

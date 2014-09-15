@@ -19,6 +19,10 @@
         this._navigateToAlert('aggression');
     },
 
+    goToRescues: function () {
+        this._app.kendoApp.navigate('views/rescues.html');
+    },
+
     _navigateToAlert: function (type) {
         this._app.kendoApp.navigate('views/alert.html?type=' + type);
     }

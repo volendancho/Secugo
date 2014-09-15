@@ -90,7 +90,7 @@
         height: 100%;
         background-color: #fff;
         color: #000;
-        font-size: 3em;
+        font-size: 2.5em;
         float: left;
         margin: 0 4%;
     }
@@ -118,7 +118,7 @@
         .km-widget.km-view#preAlert .countdown-timer .timer-wrapper {
             background-color: #000;
             color: #f00;
-            font-size: 3em;
+            font-size: 2.5em;
             text-align: center;
             height: 85%;
             padding: 5%;
@@ -141,7 +141,7 @@
             position: relative;
             float: left;
         }
-        
+
         .km-widget.km-view#preAlert .timer-labels-row .minutes {
             left: 30%;
         }
@@ -149,3 +149,7 @@
         .km-widget.km-view#preAlert .timer-labels-row .seconds {
             left: 40%;
         }
+
+.sent-alert-text-size {
+    font-size: 1.5em !important;
+}

@@ -78,4 +78,18 @@ a {
 .tile.safe-places {
     background-color: #579657;
 }
+.tile.camera,
+.tile.file {
+    background-color: #368cc4;
+}
+.tile.family,
+.tile.album {
+    background-color: #4c9acc;
+}
+.tile.person {
+    background-color: #767676;
+}
+.tile.person.lighter {
+    background-color: #898989;
+}
 /* END TILES */

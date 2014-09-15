@@ -1,5 +1,8 @@
 AlertView = ObservableView.extend({
 
+    goToRescues: function () {
+        this._app.kendoApp.navigate('views/rescues.html');
+    },
     stopAlertClick: function () {
         if (!this._alertStarted) {
             if (this._alertType === 'aggression') {

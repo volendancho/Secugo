@@ -7,14 +7,6 @@
 .km-widget.km-view#camera .tile > div {
     padding: 20px 0 20px 0;
 }
-.km-widget.km-view#camera .tile.camera,
-.km-widget.km-view#camera .tile.file {
-    background-color: #368cc4;
-}
-.km-widget.km-view#camera .tile.family,
-.km-widget.km-view#camera .tile.album {
-    background-color: #59a9dd;
-}
 .km-widget.km-view#camera .preview {
     text-align: center;
 }

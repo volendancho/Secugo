@@ -22,12 +22,17 @@
     resetAlert: function () {
         if (!this._alertStarted) {
             this._stopAlert();
-            this._startTimer(_minutes);
+            this._startTimer(this._minutes);
         } else {
+            $('.km-widget.km-view#preAlert .countdown-timer .timer-wrapper').addClass('sent-alert-text-size');
             this.set('AlertTimeout', 'An alert has already been sent!');
         }
     },
     alertViewHide: function () {
+        $('.km-widget.km-view#preAlert .countdown').removeClass('countdown-slide');
+        $('.km-widget.km-view#preAlert .countdown-timer').removeClass('countdown-slide');
+        $('.km-widget.km-view#preAlert .countdown-timer .timer-wrapper').removeClass('sent-alert-text-size');
+        this._alertStarted = false;
         this._stopAlert();
     },
     immediateAlertAggression: function () {
@@ -46,9 +51,9 @@
     _startTimer: function (minutes) {
         $('.km-widget.km-view#preAlert .countdown-timer').addClass('countdown-slide');
 
-        _minutes = minutes;
-        RemTime = _minutes * 60;
-        var result = this._convertSeconds(RemTime);
+        this._minutes = minutes;
+        this.RemTime = this._minutes * 60;
+        var result = this._convertSeconds(this.RemTime);
         this.set('AlertTimeout', result);
 
         var that = this;
@@ -63,11 +68,11 @@
         }
     },
     _tryStartAlert: function () {
-        RemTime -= 1;
-        var result = this._convertSeconds(RemTime);
+        this.RemTime -= 1;
+        var result = this._convertSeconds(this.RemTime);
         this.set('AlertTimeout', result);
 
-        if (RemTime === 0) {
+        if (this.RemTime === 0) {
             this._stopAlertTimer();
             this._startAlert();
         }
@@ -94,10 +99,12 @@
     },
     _startImmediateAlert: function (type) {
         if (!this._alertStarted) {
+            $('.km-widget.km-view#preAlert .countdown').addClass('countdown-slide');
             $('.km-widget.km-view#preAlert .countdown-timer').addClass('countdown-slide');
             this._stopAlertTimer();
             this._startAlert(type);
         } else {
+            $('.km-widget.km-view#preAlert .countdown-timer .timer-wrapper').addClass('sent-alert-text-size');
             this.set('AlertTimeout', 'An alert has already been sent!');
         }
     },
@@ -119,8 +126,6 @@ $.extend(app, {
         app.preAlertView.reset(e.view);
     },
     onPreAlertViewHide: function () {
-        $('.km-widget.km-view#preAlert .countdown-timer').removeClass('countdown-slide');
-        $('.km-widget.km-view#preAlert .countdown').removeClass('countdown-slide');
         app.preAlertView.alertViewHide();
     },
     preAlertView: new PreAlertView(app)
