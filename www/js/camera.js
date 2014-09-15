@@ -12,6 +12,7 @@ CameraView = ObservableView.extend({
     },
 
     cameraClick: function () {
+        this._app.flashlight.switchOff();
         this._camera.capturePhoto();
     },
     albumClick: function () {
