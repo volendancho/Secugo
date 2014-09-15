@@ -1,6 +1,6 @@
 ﻿function FlashlightWrapper() {
     var that = this;
-    if (window.window.plugins && window.plugins.flashlight) {
+    if (window.plugins && window.plugins.flashlight) {
         this._flashlight = window.plugins.flashlight;
         this._flashlight.available(function (isAvailable) {
             that._available = isAvailable;
