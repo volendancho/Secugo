@@ -24,7 +24,7 @@ var app = {
     },
 
     _initPlugins: function () {
-        this.flashlight = new FlashlightWrapper();
+        //this.flashlight = new FlashlightWrapper();
         this.gps = new GPSWrapper();
     },
 
