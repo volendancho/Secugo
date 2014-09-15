@@ -1,12 +1,12 @@
 ﻿function GPSWrapper() {
     this._getGeolocation();
+
 }
 
 GPSWrapper.prototype = {
 
     _getGeolocation: function () {
-        //var options = { timeout: 30000, enableHighAccuracy: true };
-        var options = { enableHighAccuracy: true };
+        var options = { timeout: 30000, enableHighAccuracy: true };
         navigator.geolocation.getCurrentPosition(this._getPosition, this._positionError, options);
     },
 
@@ -30,8 +30,7 @@ GPSWrapper.prototype = {
                     var splittedAddress = results[0].formatted_address.split(',');
                     var formattedAddress = splittedAddress[0] + '<br />' + splittedAddress[1] + '<br />' + splittedAddress[2];
 
-                    this.set('currentAddress', formattedAddress);
-                    //$('#gps-location-info span').html(formattedAddress);
+                    $('#gps-location-info span').html(formattedAddress);
                 }
                 else {
                     navigator.notification.alert('Unable to detect your address.');
@@ -40,7 +39,5 @@ GPSWrapper.prototype = {
                 navigator.notification.alert('Unable to detect your address.');
             }
         });
-    },
-
-    currentAddress: null
+    }
 };
