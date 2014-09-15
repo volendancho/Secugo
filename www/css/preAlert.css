@@ -43,6 +43,7 @@
         }
 
         .km-widget.km-view#preAlert .countdown div.countdown-icon-row {
+            position: relative;
             height: 15%;
         }
 

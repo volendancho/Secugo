@@ -4,11 +4,9 @@ CameraView = ObservableView.extend({
 
         var that = this;
         this._camera = new CameraWrapper(
+            null,
             function () {
-                that._photoCaptured.apply(that, arguments);
-            },
-            function () {
-                that._fileOpened.apply(that, arguments);
+                that._photoOpened.apply(that, arguments);
             }
         );
     },
@@ -16,8 +14,12 @@ CameraView = ObservableView.extend({
     cameraClick: function () {
         this._camera.capturePhoto();
     },
+    albumClick: function () {
+        this._camera.getPhotoFromLibrary();
+    },
     closePhotoClick: function () {
         this._resetImage();
+        return false;
     },
 
     _initView: function () {
@@ -26,15 +28,12 @@ CameraView = ObservableView.extend({
         this._resetImage();
     },
 
-    _photoCaptured: function (uri, imageData) {
-        this._showImage(uri);
-    },
     _photoOpened: function (uri) {
         this._showImage(uri);
     },
-    _showImage: function(uri){
+    _showImage: function (uri) {
         this.set('ImageUri', uri);
-        this.set('Catured', true);
+        this.set('Captured', true);
     },
     _resetImage: function(){
         this.set('ImageUri', '');

@@ -20,19 +20,21 @@
         this.goBack();
     },
     resetAlert: function () {
-        this._stopAlert();
-        this._startTimer(_minutes);
+        if (!this._alertStarted) {
+            this._stopAlert();
+            this._startTimer(_minutes);
+        } else {
+            this.set('AlertTimeout', 'An alert has already been sent!');
+        }
     },
     alertViewHide: function () {
         this._stopAlert();
     },
     immediateAlertAggression: function () {
-        this._stopAlertTimer();
-        this._startAlert('aggression');
+        this._startImmediateAlert('aggression');
     },
     immediateAlertMedical: function () {
-        this._stopAlertTimer();
-        this._startAlert('medical');
+        this._startImmediateAlert('medical');
     },
 
     _initView: function () {
@@ -89,6 +91,15 @@
 
         var result = (minutes < 10 ? "0" + minutes : minutes) + ":" + (seconds < 10 ? "0" + seconds : seconds);
         return result;
+    },
+    _startImmediateAlert: function (type) {
+        if (!this._alertStarted) {
+            $('.km-widget.km-view#preAlert .countdown-timer').addClass('countdown-slide');
+            this._stopAlertTimer();
+            this._startAlert(type);
+        } else {
+            this.set('AlertTimeout', 'An alert has already been sent!');
+        }
     },
 
     _alertStarted: false,

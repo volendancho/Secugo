@@ -15,3 +15,13 @@
 .km-widget.km-view#camera .tile.album {
     background-color: #59a9dd;
 }
+.km-widget.km-view#camera .preview {
+    text-align: center;
+}
+.km-widget.km-view#camera .preview > img {
+    width: 100%;
+}
+.km-widget.km-view#camera .preview > button {
+    position: absolute;
+    bottom: 2px;
+}

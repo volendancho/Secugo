@@ -1,6 +1,6 @@
-﻿function CameraWrapper(captureSuccess, fileSuccess) {
-    this._photoDataSuccessCallback = captureSuccess;
-    this._photoURISuccessCallback = fileSuccess;
+﻿function CameraWrapper(captureSuccess, openSuccess) {
+    this._captureSuccess = captureSuccess;
+    this._openSuccess = openSuccess;
 }
 
 CameraWrapper.prototype = {
@@ -11,14 +11,15 @@ CameraWrapper.prototype = {
         // Take picture using device camera and retrieve image as base64-encoded string.
         navigator.camera.getPicture(
             function () {
-                that._onPhotoDataSuccess.apply(that, arguments);
+                that._onCaptureSuccess.apply(that, arguments);
             }, function () {
                 that._onFail.apply(that, arguments);
             }, {
                 quality: 100,
                 encodingType: navigator.camera.EncodingType.JPEG,
                 correctOrientation: false,
-                destinationType: navigator.camera.DestinationType.DATA_URL
+                destinationType: navigator.camera.DestinationType.FILE_URI,
+                saveToPhotoAlbum: true
             }
         );
     },
@@ -27,13 +28,14 @@ CameraWrapper.prototype = {
         // Take picture using device camera, allow edit, and retrieve image as base64-encoded string. 
         // The allowEdit property has no effect on Android devices.
         navigator.camera.getPicture(function () {
-            that._onPhotoDataSuccess.apply(that, arguments);
+            that._onCaptureSuccess.apply(that, arguments);
         }, function () {
             that._onFail.apply(that, arguments);
         }, {
-            quality: 50,
+            quality: 100,
             allowEdit: true,
-            destinationType: navigator.camera.DestinationType.DATA_URL
+            destinationType: navigator.camera.DestinationType.FILE_URI,
+            saveToPhotoAlbum: true
         });
     },
     getPhotoFromLibrary: function () {
@@ -49,7 +51,7 @@ CameraWrapper.prototype = {
         that._getPhoto(navigator.camera.PictureSourceType.SAVEDPHOTOALBUM)
     },
 
-    _getCapturedImageSrc: function(imageData){
+    _getDataImageSrc: function(imageData) {
         return 'data:image/jpeg;base64,' + imageData;
     },
     _getFileImageSrc: function (imageURI) {
@@ -60,32 +62,32 @@ CameraWrapper.prototype = {
         var that = this;
         // Retrieve image file location from specified source.
         navigator.camera.getPicture(function () {
-            that._onPhotoURISuccess.apply(that, arguments);
+            that._onOpenSuccess.apply(that, arguments);
         }, function () {
             cameraApp._onFail.apply(that, arguments);
         }, {
-            quality: 50,
+            quality: 100,
             destinationType: navigator.camera.DestinationType.FILE_URI,
             sourceType: source
         });
     },
 
-    _onPhotoDataSuccess: function (imageData) {
-        if (this._photoDataSuccessCallback) {
-            var uri = this._getCapturedImageSrc(imageData);
-            this._photoDataSuccessCallback(uri, imageData);
+    _onCaptureSuccess: function (imageData) {
+        if (this._captureSuccess) {
+            var uri = this._getDataImageSrc(imageData);
+            this._captureSuccess(uri, imageData);
         }
     },
-    _onPhotoURISuccess: function (imageURI) {
-        if (this._photoURISuccessCallback) {
+    _onOpenSuccess: function (imageURI) {
+        if (this._openSuccess) {
             var src = this._getFileImageSrc(imageURI);
-            this._photoURISuccessCallback(imageURI);
+            this._openSuccess(imageURI);
         }
     },
     _onFail: function (message) {
-        alert(message);
+        //alert(message);
     },
 
-    _photoDataSuccessCallback: null,
-    _photoURISuccessCallback: null,
+    _captureSuccess: null,
+    _openSuccess: null,
 };
