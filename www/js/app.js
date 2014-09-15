@@ -1,5 +1,4 @@
 var app = {
-    // Application Constructor
     initialize: function () {
         this.initKendo();
         this.bindEvents();
