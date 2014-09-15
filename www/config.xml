@@ -42,7 +42,8 @@
   <gap:plugin name="org.apache.cordova.network-information" />
   <gap:plugin name="org.apache.cordova.splashscreen" />
   <gap:plugin name="org.apache.cordova.vibration" />
-
+  <gap:plugin name="nl.x-services.plugins.flashlight" />
+  
   <!--Fix status bar bug in iOS-->
   <gap:plugin name="com.phonegap.plugin.statusbar" />
   <preference name="StatusBarOverlaysWebView" value="true" />
