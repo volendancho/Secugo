@@ -15,6 +15,25 @@
     showTimer3Minutes: function () {
         this._startTimer(3);
     },
+    stopAlertClick: function () {
+        this._stopAlert();
+        this.goBack();
+    },
+    resetAlert: function () {
+        this._stopAlert();
+        this._startTimer(_minutes);
+    },
+    alertViewHide: function () {
+        this._stopAlert();
+    },
+    immediateAlertAggression: function () {
+        this._stopAlertTimer();
+        this._startAlert('aggression');
+    },
+    immediateAlertMedical: function () {
+        this._stopAlertTimer();
+        this._startAlert('medical');
+    },
 
     _initView: function () {
         ObservableView.fn._initView.call(this);
@@ -24,11 +43,10 @@
     },
     _startTimer: function (minutes) {
         $('.km-widget.km-view#preAlert .countdown-timer').addClass('countdown-slide');
-        $('.km-widget.km-view#preAlert .countdown-minutes').hide();
 
-        RemTime = minutes * 60;
-
-        var result = '0' + minutes + ':00';
+        _minutes = minutes;
+        RemTime = _minutes * 60;
+        var result = this._convertSeconds(RemTime);
         this.set('AlertTimeout', result);
 
         var that = this;
@@ -44,11 +62,7 @@
     },
     _tryStartAlert: function () {
         RemTime -= 1;
-        var minutes = parseInt(RemTime / 60) % 60;
-        var seconds = RemTime % 60;
-
-        var result = (minutes < 10 ? "0" + minutes : minutes) + ":" + (seconds < 10 ? "0" + seconds : seconds);
-
+        var result = this._convertSeconds(RemTime);
         this.set('AlertTimeout', result);
 
         if (RemTime === 0) {
@@ -56,7 +70,7 @@
             this._startAlert();
         }
     },
-    _startAlert: function () {
+    _startAlert: function (preAlertType) {
         this._alertStarted = true;
         this._app.currentAlert = {
             deviceUUID: '', // TODO: Get device UUID.
@@ -65,9 +79,21 @@
         }; // TODO: AJAX to send notification + Receive ID.
         this.set('AlertTimeout', 'Alert sent');
     },
+    _stopAlert: function () {
+        this._stopAlertTimer();
+        this._app.currentAlert = null;
+    },
+    _convertSeconds: function (time) {
+        var minutes = parseInt(time / 60) % 60;
+        var seconds = time % 60;
+
+        var result = (minutes < 10 ? "0" + minutes : minutes) + ":" + (seconds < 10 ? "0" + seconds : seconds);
+        return result;
+    },
 
     _alertStarted: false,
     _alertTimer: null,
+    _minutes: null,
 
     AlertTimeout: null,
     RemTime: null,
@@ -82,8 +108,9 @@ $.extend(app, {
         app.preAlertView.reset(e.view);
     },
     onPreAlertViewHide: function () {
-        $('.km-widget.km-view#preAlert .countdown').removeClass('countdown-slide');
         $('.km-widget.km-view#preAlert .countdown-timer').removeClass('countdown-slide');
+        $('.km-widget.km-view#preAlert .countdown').removeClass('countdown-slide');
+        app.preAlertView.alertViewHide();
     },
     preAlertView: new PreAlertView(app)
 });

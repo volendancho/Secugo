@@ -4,13 +4,13 @@
             <div class="rescue-icon">
                 <img src="img/preAlert_rescues.png" />
             </div>
-            <div class="stop-alert-icon">
+            <div class="stop-alert-icon" data-bind="events: { click: stopAlertClick }">
                 <img src="img/preAlert_stopPreAlert.png" />
             </div>
             <div class="clearfix"></div>
         </div>
         <div class="countdown-timer">
-            <div class="timer-wrapper" data-bind="text: AlertTimeout"></div>
+            <div class="timer-wrapper" data-bind="text: AlertTimeout, events: { click: resetAlert }"></div>
             <div class="timer-labels-row">
                 <div class="minutes">mns</div>
                 <div class="seconds">secs</div>
@@ -44,7 +44,7 @@
                 Aggression
             </div>
         </div>
-        <div class="tile aggression">
+        <div class="tile aggression" data-bind="events: { click: immediateAlertAggression }">
             <div>
                 <img src="img/home_aggression.png" />
             </div>
@@ -62,7 +62,7 @@
                 Medical
             </div>
         </div>
-        <div class="tile emergency">
+        <div class="tile emergency" data-bind="events: { click: immediateAlertMedical }">
             <div>
                 <img src="img/home_medical.png" />
             </div>

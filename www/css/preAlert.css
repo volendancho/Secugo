@@ -119,7 +119,7 @@
             color: #f00;
             font-size: 3em;
             text-align: center;
-            height: 100%;
+            height: 85%;
             padding: 5%;
         }
 
@@ -133,9 +133,18 @@
         }
 
     .km-widget.km-view#preAlert .timer-labels-row {
-        height: 100%;
+        height: 15%;
     }
 
         .km-widget.km-view#preAlert .timer-labels-row div {
+            position: relative;
             float: left;
+        }
+        
+        .km-widget.km-view#preAlert .timer-labels-row .minutes {
+            left: 30%;
+        }
+
+        .km-widget.km-view#preAlert .timer-labels-row .seconds {
+            left: 40%;
         }
